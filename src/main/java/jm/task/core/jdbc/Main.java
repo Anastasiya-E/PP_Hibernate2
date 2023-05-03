@@ -6,7 +6,7 @@ import jm.task.core.jdbc.dao.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        Util.getConnection();
+        Util.getSessionFactory();
         UserDao userDao = new UserDaoJDBCImpl();
         userDao.createUsersTable();
         userDao.saveUser("Name1", "LastName1", (byte) 20);
