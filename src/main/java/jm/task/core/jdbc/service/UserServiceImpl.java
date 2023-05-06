@@ -6,32 +6,31 @@ import java.util.List;
 import jm.task.core.jdbc.dao.*;
 
 public class UserServiceImpl implements UserService {
-    private UserDaoHibernateImpl userDao = new UserDaoHibernateImpl();
     public UserServiceImpl() throws SQLException {
 
     }
 
     public void createUsersTable() throws SQLException {
-        userDao.createUsersTable();
+        userDaoHibernateImpl.createUsersTable();
     }
 
     public void dropUsersTable() throws SQLException {
-        userDao.dropUsersTable();
+        userDaoHibernateImpl.dropUsersTable();
     }
 
     public void saveUser(String name, String lastName, byte age) throws SQLException {
-        userDao.saveUser(name, lastName, age);
+        userDaoHibernateImpl.saveUser(name, lastName, age);
     }
 
     public void removeUserById(long id) throws SQLException {
-        userDao.removeUserById(id);
+        userDaoHibernateImpl.removeUserById(id);
     }
 
     public List<User> getAllUsers() throws SQLException {
-        return userDao.getAllUsers();
+        return userDaoHibernateImpl.getAllUsers();
     }
 
     public void cleanUsersTable() throws SQLException {
-        userDao.cleanUsersTable();
+        userDaoHibernateImpl.cleanUsersTable();
     }
 }

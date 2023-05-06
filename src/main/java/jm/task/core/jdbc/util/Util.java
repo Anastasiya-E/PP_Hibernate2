@@ -24,8 +24,7 @@ public class Util {
                     .setProperty(Environment.PASS, PASSWORD)
                     .setProperty(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect")
                     .setProperty(Environment.SHOW_SQL, "true")
-                    .setProperty(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread")
-                    .setProperty(Environment.HBM2DDL_AUTO, "create-drop");
+                    .setProperty(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties())
                     .build();
